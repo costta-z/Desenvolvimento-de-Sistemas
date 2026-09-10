@@ -5,5 +5,22 @@ import java.util.Scanner;
 public class LojaApp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        Loja a =new Loja(null, 0, 0);
+
+        System.out.println("Informe o Nome: ");
+        a.setNome(sc.nextLine());
+
+        System.out.println("Informe o preço: ");
+        a.setPreco(sc.nextFloat());
+
+        System.out.println("Informe a quantidade: ");
+        a.setQuantidade(sc.nextInt());
+
+        System.out.println("O Nome: "+a.getNome());
+        System.out.println("O Preço: "+a.getPreco());
+        System.out.println("A Quantidade: "+a.getQuantidade());
+
+        sc.close();
     }
 }

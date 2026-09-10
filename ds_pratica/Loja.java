@@ -2,11 +2,11 @@ package ds_pratica;
 
 public class Loja {
     private String nome;
-    private int preco;
+    private float preco;
     private int quantidade;
 
 
-    public Loja(String nome, int preco, int quantidade) {
+    public Loja(String nome, float preco, int quantidade) {
         this.nome = nome;
         this.preco = preco;
         this.quantidade = quantidade;
@@ -20,11 +20,11 @@ public class Loja {
         this.nome = nome;
     }
 
-    public int getPreco(){
+    public float getPreco(){
         return preco;
     }
 
-    public void setPreco(int preco){
+    public void setPreco(float preco){
         this.preco = preco;
     }
 
