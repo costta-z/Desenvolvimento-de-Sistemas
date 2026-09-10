@@ -17,9 +17,9 @@ public class LojaApp {
         System.out.println("Informe a quantidade: ");
         a.setQuantidade(sc.nextInt());
 
-        System.out.println("O Nome: "+a.getNome());
-        System.out.println("O Preço: "+a.getPreco());
-        System.out.println("A Quantidade: "+a.getQuantidade());
+        System.out.println("\nO Nome: "+a.getNome());
+        System.out.println("\nO Preço: "+a.getPreco());
+        System.out.println("\nA Quantidade: "+a.getQuantidade());
 
         sc.close();
     }
