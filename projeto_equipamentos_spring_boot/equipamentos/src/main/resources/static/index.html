@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipamentos | Gestão de Manutenção</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="equipamentos.js" defer></script>
+</head>
+<body class="pagina-sistema">
+    <header class="cabecalho">
+        <div>
+            <span class="marca pequena">GE</span>
+            <div class="titulo-cabecalho">
+                <h1>Gestão de Equipamentos</h1>
+                <p>Controle de manutenção de informática</p>
+            </div>
+        </div>
+        <button id="btnSair" class="botao botao-secundario">Sair do sistema</button>
+    </header>
+
+    <main class="conteudo">
+        <section class="cartao">
+            <div class="cabecalho-secao">
+                <div>
+                    <h2 id="tituloFormulario">Cadastrar equipamento</h2>
+                    <p class="subtitulo">Informe os dados do equipamento recebido.</p>
+                </div>
+            </div>
+
+            <form id="formEquipamento">
+                <input type="hidden" id="codigo">
+
+                <div class="grade-formulario">
+                    <div>
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" maxlength="100" placeholder="Ex.: Notebook" required>
+                    </div>
+                    <div>
+                        <label for="marca">Marca</label>
+                        <input type="text" id="marca" maxlength="100" placeholder="Ex.: Dell" required>
+                    </div>
+                    <div>
+                        <label for="modelo">Modelo</label>
+                        <input type="text" id="modelo" maxlength="100" placeholder="Ex.: Inspiron 15" required>
+                    </div>
+                    <div>
+                        <label for="status">Status</label>
+                        <select id="status" required>
+                            <option value="">Selecione o status</option>
+                            <option>Aguardando manutenção</option>
+                            <option>Em manutenção</option>
+                            <option>Manutenção concluída</option>
+                            <option>Entregue ao cliente</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="acoes-formulario">
+                    <button type="submit" id="btnSalvar" class="botao">Cadastrar</button>
+                    <button type="button" id="btnCancelar" class="botao botao-secundario" hidden>Cancelar</button>
+                </div>
+            </form>
+            <p id="mensagem" class="mensagem" role="status"></p>
+        </section>
+
+        <section class="cartao tabela-cartao">
+            <div class="cabecalho-secao">
+                <div>
+                    <h2>Equipamentos cadastrados</h2>
+                    <p class="subtitulo">Registros armazenados no banco de dados.</p>
+                </div>
+                <button type="button" id="btnAtualizar" class="botao botao-claro">Atualizar lista</button>
+            </div>
+
+            <div class="tabela-responsiva">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Status</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaEquipamentos">
+                        <tr><td colspan="6" class="vazio">Carregando equipamentos...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">Sistema de gerenciamento de equipamentos</footer>
+</body>
+</html>

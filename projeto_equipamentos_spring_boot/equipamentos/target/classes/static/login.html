@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Gestão de Equipamentos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js" defer></script>
+</head>
+<body class="pagina-autenticacao">
+    <main class="cartao autenticacao">
+        <div class="marca">GE</div>
+        <h1>Gestão de Equipamentos</h1>
+        <p class="subtitulo">Entre para gerenciar os equipamentos.</p>
+
+        <form id="formLogin">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="usuario@email.com" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
+
+            <button type="submit" class="botao">Entrar</button>
+        </form>
+
+        <p id="mensagem" class="mensagem" role="status"></p>
+        <p class="rodape-formulario">Ainda não possui conta?
+            <a href="cadastro.html">Criar conta</a>
+        </p>
+    </main>
+</body>
+</html>
